@@ -210,17 +210,16 @@
           Todos os direitos reservados.
         </p>
       </div>
-      <BotaoWhatsapp />
     </footer>
   </div>
 </template>
 
 <script lang="js">
-import BotaoWhatsapp from './components/BotaoWhatsapp.vue';
+
 
 export default {
   components: {
-    BotaoWhatsapp
+
   }
 };
 </script>
