@@ -8,7 +8,7 @@
             alt="Logo Advocacia"
             class="logo-img"
           />
-          <span>Mateus Fernandes Advocacia</span>
+          <span>Mateus Advocacia</span>
         </a>
         <nav>
           <ul>
@@ -167,30 +167,6 @@
             melhor assistência jurídica.
           </p>
           <div class="contact-grid">
-            <form class="contact-form" @submit.prevent="handleSubmit">
-              <div class="form-group">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" v-model="form.name" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" v-model="form.email" required />
-              </div>
-              <div class="form-group">
-                <label for="phone">Telefone:</label>
-                <input type="tel" id="phone" v-model="form.phone" />
-              </div>
-              <div class="form-group">
-                <label for="message">Mensagem:</label>
-                <textarea
-                  id="message"
-                  rows="6"
-                  v-model="form.message"
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" class="cta-button">Enviar Mensagem</button>
-            </form>
             <div class="contact-info">
               <h3>Informações de Contato</h3>
               <p>
@@ -207,7 +183,7 @@
                   width="100%"
                   height="250"
                   style="border: 0"
-                  allowfullscreen=""
+                  allowfullscreen="true"
                   loading="lazy"
                 >
                 </iframe>
@@ -234,28 +210,18 @@
           Todos os direitos reservados.
         </p>
       </div>
+      <BotaoWhatsapp />
     </footer>
   </div>
 </template>
 
-<script setup>
-import { reactive } from "vue";
+<script lang="js">
+import BotaoWhatsapp from './components/BotaoWhatsapp.vue';
 
-const form = reactive({
-  name: "",
-  email: "",
-  phone: "",
-  message: "",
-});
-
-const handleSubmit = () => {
-  console.log("Formulário de contato enviado:", form);
-  alert("Sua mensagem foi enviada! Em breve entraremos em contato.");
-  // Aqui você integraria com um serviço de email como EmailJS ou Formspree
-  form.name = "";
-  form.email = "";
-  form.phone = "";
-  form.message = "";
+export default {
+  components: {
+    BotaoWhatsapp
+  }
 };
 </script>
 
