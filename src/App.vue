@@ -247,7 +247,6 @@ html {
 }
 
 * {
-  outline: 1px solid rgba(255, 0, 0, 0.2);
   margin: 0;
   padding: 0;
 }
@@ -453,6 +452,7 @@ a {
   gap: 2rem;
   margin-top: 3rem;
   width: 100%;
+  max-width: 100%;
 }
 
 .area-card {
