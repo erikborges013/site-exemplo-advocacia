@@ -174,9 +174,7 @@
                 Bairro, Cidade - UF
               </p>
               <p><i class="fas fa-phone"></i> (XX) XXXX-XXXX</p>
-              <p>
-                <i class="fas fa-envelope"></i> contato@mateusfernandes.com.br
-              </p>
+              <p><i class="fas fa-envelope"></i>contato@mateusadvocacia.com</p>
               <div class="map-placeholder">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.914902120005!2d-43.1764667850389!3d-22.90684678501188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f58b0244747%3A0x6b6d2a4a7b51b7c8!2sCristo%20Redentor!5e0!3m2!1spt-BR!2sbr!4v1678912345678!5m2!1spt-BR!2sbr"
@@ -210,16 +208,17 @@
           Todos os direitos reservados.
         </p>
       </div>
+      <BotaoWhatsapp />
     </footer>
   </div>
 </template>
 
 <script lang="js">
-
+import BotaoWhatsapp from './components/BotaoWhatsapp.vue';
 
 export default {
   components: {
-
+    BotaoWhatsapp
   }
 };
 </script>
@@ -247,6 +246,12 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  outline: 1px solid rgba(255, 0, 0, 0.2);
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Montserrat", sans-serif; /* Fonte moderna e corporativa */
   line-height: 1.6;
@@ -263,19 +268,23 @@ h3 {
   color: var(--primary-color);
 }
 
+p {
+  overflow-wrap: break-word;
+}
+
 a {
   text-decoration: none;
   color: var(--primary-color);
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0;
 }
 
 .section-description {
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto 2rem;
   font-size: 1.1rem;
   color: #555;
@@ -336,6 +345,7 @@ a {
 
 .navbar .logo-img {
   width: 3rem;
+  max-width: 100%;
   margin-right: 10px;
   border-radius: 50%;
 }
@@ -374,7 +384,7 @@ a {
 .hero-content {
   display: flex;
   align-items: center;
-  max-width: 1000px;
+  max-width: 100%;
   background-color: var(--light-text);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -442,15 +452,18 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
+  width: 100%;
 }
 
 .area-card {
   background: var(--light-text);
   padding: 2.5rem;
+
   border-radius: 8px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  width: 100%;
 }
 
 .area-card:hover {
@@ -460,6 +473,7 @@ a {
 
 .area-card .area-icon {
   width: 120px;
+  max-width: 100%;
   height: 120px;
   object-fit: cover;
   border-radius: 5px;
@@ -526,7 +540,7 @@ a {
   flex: 1;
   background: var(--primary-color);
   color: var(--light-text);
-  padding: 2.5rem;
+  padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
@@ -539,13 +553,12 @@ a {
 
 .contact-info p {
   margin-bottom: 1rem;
-  display: flex;
+
   align-items: center;
   font-size: 1.1rem;
 }
 
 .contact-info p i {
-  margin-right: 10px;
   color: var(--secondary-color);
   font-size: 1.2rem;
 }
@@ -564,6 +577,7 @@ a {
 .form-group input,
 .form-group textarea {
   width: 100%;
+  max-width: 100%;
   padding: 0.9rem;
   border: 1px solid #ddd;
   border-radius: 5px;
