@@ -20,7 +20,7 @@ export default defineComponent({
 .icone-whatsapp {
   position: fixed;
   width: 4rem;
-  bottom: 0;
-  right: 0;
+  bottom: 10px;
+  right: 10px;
 }
 </style>
